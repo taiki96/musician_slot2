@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset = 'UTF-8'>
+        <title>Today's Your Musician</title>
+        <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="original2.css" type="text/css" />
+    </head>
+    <body>
+        <div id="top_page">
+            <header id="header">
+                <h1>Today's Your Musician</h1>
+                <div id="list"></div>
+            </header>
+            <main id="main">
+                <section id="part1">
+                    <h2>今あなたが聴くアーティストを決めよう！</h2>
+                        <div id="images">
+                            <div id = "slot">
+                                <canvas id = "cv1" width = "400" height = "150"></canvas>
+                            　　<div id='waku'></div>
+                            </div>
+                        </div>
+                        
+                        <div id="buttons">
+                            <div id = "start_btn">
+                                <input type="button" name="btn_start" id="startbtn" value = "Start" onclick = "reelStart();">
+                            </div>
+                            <div id = "stop_button">
+                                <input type="button" name="btn_stop" id="stopbtn" value="Stop" onclick="reelStop();">
+                            </div>
+                            <div id = "del_button">
+                                <input type="button" name="btn_reset" id="delbtn" value="Reset" onclick="delCookie();">
+                            </div>
+                            <div id = "sp_button">
+                                <input type="button" name="btn_spotify" id="spbtn" value="spotify" onclick="spSearch();">
+                            </div>
+                        </div>
+                </section>
+            
+                <section id="part2">
+                    <h3>Check your favorite artist's videos and let's regist!</h3>
+                    <form action="" method="get">
+                    <div id = 'registration'>
+                        <input type = "search" name = "artists" id = "artistName" value="" placeholder = "your favorite artist">
+                        <input type = "button" id = regist name = "btn_regist" value = "登録" onclick = "saveCookie();">
+                        <input type = "button" id = search name = "btn_search" value = "検索" onclick = "search_youtube();">
+                    </div>
+                    </form>
+                    
+                    <div id='search_containar'>
+                    </div>
+                    
+                    
+                    
+                </section>
+            </main>
+            <footer id="footer">
+                <p>Have a nice music day!</p>
+            </footer>
+        </div>
+        <script type="text/javascript" src="slot2.js"></script>
+        <script type="text/javascript" src="search2.js"></script>
+        <script type="text/javascript" src="spotify.js"></script>
+    </body>
+</html>
